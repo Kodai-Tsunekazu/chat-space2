@@ -1,0 +1,18 @@
+.side-bar
+  .user-name
+    .user-name__top-items
+      %p.user-name__top-items__name
+        常数
+      %ul.user-name__top-items__icons
+        %li.user-name__top-items__icons__new-group
+          = link_to "#" do
+            = icon('far', 'edit')
+        %li.user-name__top-items__icons__edit-user
+          = link_to "#" do
+            = icon('fas', 'cog')
+  .group-list
+    = link_to "#", class:"group" do
+      %p.group__group-name
+        test
+      %p.group__latest-message
+        まだありません
