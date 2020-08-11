@@ -2,17 +2,25 @@
   .user-name
     .user-name__top-items
       %p.user-name__top-items__name
-        常数
+        = current_user.name
       %ul.user-name__top-items__icons
         %li.user-name__top-items__icons__new-group
           = link_to "#" do
             = icon('far', 'edit')
         %li.user-name__top-items__icons__edit-user
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .group-list
     = link_to "#", class:"group" do
       %p.group__group-name
-        test
+        グループ名
       %p.group__latest-message
-        まだありません
+        新着メッセージ
+      %p.group__group-name
+        グループ名
+      %p.group__latest-message
+        新着メッセージ
+      %p.group__group-name
+        グループ名
+      %p.group__latest-message
+        新着メッセージ
