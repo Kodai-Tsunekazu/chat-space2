@@ -2,13 +2,14 @@
   .group-info
     .group-info__left-box
       %h2.group-info__left-box__current-group
-        テスト
+        = @group.name
       %ul.group-info__left-box__member-list
         Member:
-        %li.group-info__left-box__member-list__member
-          kodai
+        - @group.users.each do |user|
+          %li.group-info__left-box__member-list__member
+            = user.name 
     
-    = link_to edit_group_path(1), class:"edit-btn" do
+    = link_to edit_group_path(@group.id), class:"edit-btn" do
       Edit
   
   .message-list
