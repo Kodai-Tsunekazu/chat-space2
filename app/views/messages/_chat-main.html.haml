@@ -15,11 +15,13 @@
   .message-list
     = render @messages
 
+  
+
   .message-form
     = form_for [@group, @message] do |f|
-      .input-box
+      .input-box 
         = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
         = f.label :image, class: 'input-box__image' do
-          = icon('fas', 'image', class: 'icon')
+          = icon('fas', 'image')
           = f.file_field :image, class: 'input-box__image__file'
       = f.submit 'Send', class: 'submit-btn'
