@@ -85,7 +85,7 @@ $(function(){
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
         $('.message-list').append(insertHTML);
-        $('.message-list').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
       }
     })
     .fail(function() {
@@ -93,6 +93,6 @@ $(function(){
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    setInterval(reloadMessages, 7000);
+    setInterval(reloadMessages, 20000);
   }
 });
