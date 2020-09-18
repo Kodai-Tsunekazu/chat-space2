@@ -55,11 +55,13 @@ $(function(){
        var html = buildHTML(data);
        $('.message-list').append(html);
        $('form')[0].reset();
-       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
-       $('.submit-btn').prop('disabled', false);
+       $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});     
      })
      .fail(function() {
-      alert("メッセージ送信に失敗しました");
+       alert("メッセージ送信に失敗しました");
+     })
+     .always(function() { 
+       $('.submit-btn').prop('disabled', false);
      });
   })
   var reloadMessages = function() {
